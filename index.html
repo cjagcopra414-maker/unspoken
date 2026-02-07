@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unspoken — Shared Hearts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        background: 'var(--bg)',
+                        surface: 'var(--surface)',
+                        surfaceHover: 'var(--surface-hover)',
+                        primary: 'var(--text-primary)',
+                        secondary: 'var(--text-secondary)',
+                        border: 'var(--border)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            /* Noir (Default Dark) */
+            --bg: #09090b;
+            --surface: #18181b;
+            --surface-hover: #27272a;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --border: #27272a;
+        }
+
+        [data-theme='paper'] {
+            /* Paper (Light) */
+            --bg: #ffffff;
+            --surface: #f4f4f5;
+            --surface-hover: #e4e4e7;
+            --text-primary: #18181b;
+            --text-secondary: #71717a;
+            --border: #e4e4e7;
+        }
+
+        [data-theme='sepia'] {
+            /* Sepia (Warm) */
+            --bg: #f8f5f2;
+            --surface: #efeae4;
+            --surface-hover: #e5dfd3;
+            --text-primary: #574c43;
+            --text-secondary: #9c9288;
+            --border: #dcd4c8;
+        }
+
+        [data-theme='midnight'] {
+            /* Midnight (Blue Dark) */
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --surface-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            margin: 0;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Minimalist Card Styles */
+        .minimal-card {
+            background-color: var(--surface);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1280px) { .masonry-grid { column-count: 3; } }
+        @media (min-width: 1600px) { .masonry-grid { column-count: 4; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

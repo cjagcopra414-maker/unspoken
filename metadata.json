@@ -1,0 +1,7 @@
+{
+  "name": "Unspoken",
+  "description": "A poetic space to dedicate song lyrics and book quotes to those you admire, inspired by the aesthetics of Apple and Pinterest.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
